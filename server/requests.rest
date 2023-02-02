@@ -1,0 +1,28 @@
+POST http://localhost:3000/location/new HTTP/1.1
+Content-Type: application/json
+
+{
+  "location": "Austin"
+}
+
+###
+PUT http://localhost:3000/location/63db4c06d33b3a569b3d27b3/bar/new HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Bopeeps",
+    "cuisine": "Cocktail/Live Singing",
+    "rating": 10
+}
+
+###
+DELETE http://localhost:3000/location/63db4a7124ad5fff884ac6c1
+
+###
+GET http://localhost:3000/location/63db4c06d33b3a569b3d27b3
+
+###
+DELETE http://localhost:3000/location/63db4c06d33b3a569b3d27b3/restaurant/Bopeeps
+
+###
+DELETE http://localhost:3000/location/63db4c06d33b3a569b3d27b3/bar/BoPeePs
