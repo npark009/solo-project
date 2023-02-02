@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import LocationHome from './Components/location-home';
+import { Route, Routes } from 'react-router-dom';
+
+import LocationHome from './Components/LocationHome';
+import HomePage from './Components/HomePage';
 const App = () => {
   return (
-    <div>
-      <LocationHome />
+    <div className="router">
+      <main>
+        <Routes>
+          <Route
+            exact
+            path="/:locationName"
+            component={() => <LocationHome />}
+          />
+          <Route exact path="/" component={() => <HomePage />} />
+        </Routes>
+      </main>
     </div>
   );
 };

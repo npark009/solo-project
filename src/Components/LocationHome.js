@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import RestInput from './restaurantInput';
-import RestList from './restaurantList';
-import BarInput from './barInput';
-import BarList from './barList';
+import { Link, withRouter, useParams } from 'react-router-dom';
+import RestInput from './RestaurantInput';
+import RestList from './RestaurantList';
+import BarInput from './BarInput';
+import BarList from './BarList';
 //require data from database
 const LocationHome = () => {
+  const { locationName } = useParams();
   const [bars, setBars] = useState([]);
   const [bar, setBar] = useState('');
   const [rests, setRests] = useState([]);
@@ -39,9 +40,9 @@ const LocationHome = () => {
   };
 
   return (
-    <div>
-      <div id="location">
-        <h1>Travel Location</h1>
+    <section>
+      <div id="location header">
+        <h1>{locationName}</h1>
       </div>
       <div id="recs-container">
         <div id="restaurant-rec">
@@ -60,7 +61,7 @@ const LocationHome = () => {
           <BarList barList={bars} removeBar={deleteBar} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
