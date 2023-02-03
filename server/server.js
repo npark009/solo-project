@@ -13,13 +13,16 @@ db.once('open', function () {
 });
 
 app.use(express.json());
+app.use(express.urlencoded());
 app.use(cors());
 app.use('/', express.static(path.join(__dirname, '../dist')));
 
 const Recommendations = require('./models/Recommendations');
 
 app.get('/location/:id', async (req, res) => {
-  const locations = await Recommendations.find({ _id: req.params.id });
+  const locations = await Recommendations.find({
+    _id: req.params.id,
+  });
   res.json(locations);
 });
 
@@ -48,11 +51,7 @@ app.put('/location/:id/restaurant/new', async (req, res) => {
   console.log('1rec.restaurants', rec.restaurants);
   if (rec) {
     console.log('2rec.restaurants', rec.restaurants);
-    rec.restaurants.push({
-      name: req.body.name,
-      cuisine: req.body.cuisine,
-      rating: req.body.rating,
-    });
+    rec.restaurants.push(req.body);
     const updatedRec = await rec.save();
     return res.send(updatedRec);
   }
@@ -62,11 +61,7 @@ app.put('/location/:id/restaurant/new', async (req, res) => {
 app.put('/location/:id/bar/new', async (req, res) => {
   const rec = await Recommendations.findById(req.params.id);
   if (rec) {
-    rec.bars.push({
-      name: req.body.name,
-      type: req.body.type,
-      rating: req.body.rating,
-    });
+    rec.bars.push(req.body);
     const updatedRec = await rec.save();
     return res.send(updatedRec);
   }

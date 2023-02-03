@@ -39,6 +39,8 @@
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
     "@mui/material": "^5.11.7",
+    "@mui/system": "^5.11.7",
+    "@mui/x-data-grid": "^5.17.22",
     "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",

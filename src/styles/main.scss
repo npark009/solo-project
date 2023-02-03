@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400&display=swap');
+html {
+  background-color: #fbe8a6;
+  font-family: heebo;
+}
+
+body {
+  background-image: href('src/Assets/Seoul.png');
+}
+
+#newLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#homepage-header {
+  width: 100%;
+}
+#newLocationTitle {
+  font-size: 40px;
+  color: #303c6c;
+  font-family: heebo;
+}
+
+#pastLocationTitle {
+  font-size: 30px;
+  font-family: heebo;
+  display: flex;
+  justify-content: center;
+}
+
+#pastLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin: 0px auto;
+  background: #f4976c;
+  overflow-y: hidden;
+}
+
+#scrolling-wrapper {
+  margin: 0;
+  padding: 0;
+  display: table;
+  list-style: none;
+}
+.card {
+  min-width: 500px; /* < Add a min-width if needed */
+  padding: 10px 100px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #eee;
+}
+
+#recs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#location-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../Assets/Seoul.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#bar-rec {
+  width: 600px;
+}
+
+#restaurant-rec {
+  width: 600px;
+}
+
+.location-h2 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #b4dfe5;
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  background-color: #303c6c;
+  color: white;
+}
+
+.MuiBox-root {
+  background-color: #f4976c;
+  color: white;
+}
+
+#space {
+  height: 100px;
+}
+
+#pastLocationTitle {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #b4dfe5;
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+}
+
+.card {
+  color: white;
+  font-family: heebo;
+  font-size: 30px;
+}

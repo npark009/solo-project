@@ -7,14 +7,14 @@ const recommendationSchema = new Schema({
     {
       name: { type: String },
       cuisine: { type: String },
-      rating: { type: Number },
+      rating: { type: String },
     },
   ],
   bars: [
     {
       name: { type: String },
       type: { type: String },
-      rating: { type: Number },
+      rating: { type: String },
     },
   ],
 });
